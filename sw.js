@@ -1,13 +1,7 @@
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open('app-content').then(cache => {
-      return cache.addAll([
-        '/',
-        'css',
-        'data',
-        'img',
-        'js'
-      ]);
+      return cache.addAll(['/', 'css', 'data', 'img', 'js']);
     })
   );
 });
